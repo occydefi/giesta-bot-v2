@@ -1,0 +1,13 @@
+# GIESTA Bot v2.7 - Dependências (SEM pandas)
+
+# Telegram Bot
+python-telegram-bot==20.7
+
+# HTTP Requests
+requests==2.31.0
+
+# Environment Variables
+python-dotenv==1.0.0
+
+# Date/Time
+python-dateutil==2.8.2

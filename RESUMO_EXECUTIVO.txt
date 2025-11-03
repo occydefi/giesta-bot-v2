@@ -1,0 +1,241 @@
+╔═══════════════════════════════════════════════════════════════════════════╗
+║                                                                           ║
+║                🚀 GIESTA MASTER STRATEGY v2.7                            ║
+║                     RESUMO EXECUTIVO                                      ║
+║                                                                           ║
+╚═══════════════════════════════════════════════════════════════════════════╝
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  📊 O QUE É?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Bot de Telegram que monitora o ciclo cripto 24/7 usando 9 indicadores técnicos,
+on-chain e macroeconômicos. Calcula um score de 0-100 e define em qual fase do
+ciclo você está (G0 a G4), sugerindo ações específicas para BTC e Alts.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  🎯 PRINCIPAIS FUNCIONALIDADES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ Análise de 9 indicadores com pesos definidos
+✅ Score automático de 0-100 pontos
+✅ Detecção de 5 fases do ciclo (G0→G1→G2→G3→G4)
+✅ Sugestões de % para vender BTC e Alts
+✅ Alertas automáticos no Telegram (mudança de fase)
+✅ Sistema Failsafe para reentradas seguras
+✅ Monitoramento 24/7 (checagem a cada 1 hora)
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  📈 OS 9 INDICADORES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. RSI Semanal BTC (20%)     → Momentum e exaustão
+2. Funding Rate (20%)         → Euforia em derivativos
+3. MVRV Z-Score (15%)         → Valorização on-chain
+4. ETH/BTC Ratio (10%)        → Rotação BTC→ETH→Alts
+5. Fear & Greed (10%)         → Sentimento do varejo
+6. BTC Dominance (5%)         → Confirmação estrutural
+7. ETF Flows (10%)            → Liquidez institucional
+8. Puell Multiple (5%)        → Pressão de mineração
+9. Macro - DXY/VIX (5%)       → Risco sistêmico global
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  🎲 AS 5 FASES DO CICLO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+┌──────┬─────────┬─────────────────┬──────────────┬─────────────────────┐
+│ FASE │  SCORE  │      NOME       │   AÇÃO BTC   │      AÇÃO ALTS      │
+├──────┼─────────┼─────────────────┼──────────────┼─────────────────────┤
+│  G0  │   0-39  │ Acúmulo         │ Comprar/Hold │ Acumular seletivo   │
+│  G1  │  40-59  │ Rompimento ATH  │ Vender 30%   │ Vender 20-30%       │
+│  G2  │  60-69  │ Rotação ETH     │ Vender 25%   │ Vender 30%          │
+│  G3  │  70-84  │ Altseason       │ Vender 25%   │ Vender 40-50%       │
+│  G4  │ 85-100  │ Euforia Final   │ Zerar 80-100%│ Zerar (moonbag 5%)  │
+└──────┴─────────┴─────────────────┴──────────────┴─────────────────────┘
+
+💡 O bot te avisa automaticamente quando mudar de fase!
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  🛡️ SISTEMA FAILSAFE (Proteção)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Ativa quando TODAS as condições são atingidas:
+  • Score < 40
+  • RSI < 45
+  • MVRV < 1.2
+  • Funding < 0
+  • Fear & Greed < 30
+
+Regras de reentrada:
+  ✓ Recomprar 10% a cada -10% de queda do BTC
+  ✓ Reentrada total quando RSI > 50 e Funding neutro
+  ✓ Stop: BTC -15% em 24h → reduzir 50% posições
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  🚀 COMO USAR (5 PASSOS)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1️⃣  INSTALAR DEPENDÊNCIAS
+    Windows: pip install -r requirements.txt
+    Mac/Linux: pip3 install -r requirements.txt
+
+2️⃣  CRIAR BOT NO TELEGRAM
+    • Procure @BotFather
+    • Envie /newbot
+    • Copie o token
+
+3️⃣  OBTER SEU CHAT ID
+    • Procure @userinfobot
+    • Envie /start
+    • Copie o número
+
+4️⃣  CONFIGURAR .env
+    • Copie .env.example para .env
+    • Cole TELEGRAM_TOKEN e CHAT_ID
+    • Salve
+
+5️⃣  EXECUTAR
+    Windows: python bot.py (ou clique em start.bat)
+    Mac/Linux: python3 bot.py (ou ./start.sh)
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  📱 COMANDOS DO TELEGRAM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+/start      Iniciar e ver ajuda
+/status     Status rápido (preço, score, fase)
+/score      Análise COMPLETA dos 9 indicadores (~20s)
+/alerta     Ativar monitoramento automático ⭐
+/stop       Desativar monitoramento
+/fase       Ver info da fase atual
+/failsafe   Checar condições de reentrada
+/help       Mostrar ajuda
+
+⭐ Comando mais importante: /alerta (deixa o bot monitorando 24/7)
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  🔔 ALERTAS AUTOMÁTICOS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Após /alerta, você recebe notificação quando:
+
+✓ Mudar de fase (exemplo: G2 → G3)
+✓ Score variar mais de 5 pontos
+✓ Condições de Failsafe atingidas
+✓ Alertas críticos de risco
+
+Frequência: checagem a cada 1 hora
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  📂 ARQUIVOS INCLUÍDOS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+bot.py              → Bot principal
+indicators.py       → Coleta de dados
+scoring.py          → Cálculo de score
+config.py           → Configurações
+test_apis.py        → Teste das APIs
+
+README.md           → Documentação completa
+INSTALACAO.txt      → Guia visual passo a passo
+GUIA_RAPIDO.txt     → Referência rápida
+CHANGELOG.md        → Versões e roadmap
+
+start.bat           → Iniciar (Windows)
+start.sh            → Iniciar (Mac/Linux)
+requirements.txt    → Dependências
+.env.example        → Template de config
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  🌐 APIs USADAS (Todas Gratuitas)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✓ Binance API         → Preço, RSI, Funding, ETH/BTC
+✓ Alternative.me      → Fear & Greed Index
+✓ CoinMarketCap       → BTC Dominance
+✓ Yahoo Finance       → DXY e VIX
+
+OPCIONAL (melhoram precisão):
+  • CoinGlass (~$50/mês) → MVRV preciso
+  • Glassnode (~$30/mês) → On-chain avançado
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  💡 DICAS IMPORTANTES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✓ Use /alerta e deixe o bot rodando 24/7
+✓ Não opere 100% em uma fase só (venda gradual)
+✓ Respeite o Failsafe (ele te protege)
+✓ Execute /score toda segunda-feira
+✓ O bot é um GUIA, não uma verdade absoluta
+✓ Sempre faça sua própria análise (DYOR)
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  🐛 PROBLEMAS COMUNS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+❌ Bot não responde
+   → Certifique que bot.py está rodando
+   → Verifique CHAT_ID no .env
+
+❌ Erro ao coletar dados
+   → Verifique internet
+   → Execute: python test_apis.py
+
+❌ Terminal fecha e bot para
+   → Use screen/tmux (Linux/Mac)
+   → Ou rode em servidor/VPS
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ⚠️ DISCLAIMER
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Este bot é uma ferramenta EDUCACIONAL e de ANÁLISE.
+
+NÃO é uma recomendação financeira.
+Sempre faça sua própria pesquisa (DYOR).
+Consulte profissionais antes de investir.
+
+Cripto é altamente volátil e arriscado.
+Invista apenas o que pode perder.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  🎯 PRÓXIMAS VERSÕES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+v2.8 (Nov/2025)
+  • Dashboard web
+  • Integração Google Sheets
+  • Alertas por email
+
+v2.9 (Dez/2025)
+  • APIs pagas opcionais
+  • Automação de trades
+  • Backtesting histórico
+
+v3.0 (Jan/2026)
+  • Machine Learning
+  • App mobile
+  • Multi-usuário
+
+
+╔═══════════════════════════════════════════════════════════════════════════╗
+║                                                                           ║
+║         Desenvolvido com ❤️ baseado na metodologia GIESTA v2.7           ║
+║                    Última atualização: Outubro 2025                       ║
+║                                                                           ║
+╚═══════════════════════════════════════════════════════════════════════════╝
