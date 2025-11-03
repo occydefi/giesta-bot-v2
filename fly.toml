@@ -1,0 +1,17 @@
+# fly.toml - Configuração do Fly.io para GIESTA Bot
+
+app = "giesta-bot-v2"
+primary_region = "mia"
+
+[build]
+
+[env]
+  CHECK_INTERVAL = "3600"
+  DEBUG = "false"
+
+[processes]
+  app = "python bot.py"
+
+[[services]]
+  internal_port = 8080
+  protocol = "tcp"
